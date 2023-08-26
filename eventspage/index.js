@@ -1,4 +1,7 @@
 var input,temp;
+window.onload = ()=>{
+  localStorage.setItem("check", 1);
+}
 if(window.screen.width > 1200){
      input = document.getElementById("input");
 }else{
@@ -34,8 +37,11 @@ const find = (text)=>{
     }    
 
 }
+
 const find2 = (text)=>{
     if(document.getElementsByClassName(`${text}`)[0] != null){
+        localStorage.setItem("check", 0);
+        var text2 = text;
         var node = document.getElementsByClassName(`${text}`)[0];
         cardtext[0].innerHTML = node.textContent;
         cardtext[1].innerHTML = node.textContent;
@@ -44,10 +50,23 @@ const find2 = (text)=>{
         cardimg[1].setAttribute('src',`images/${text}.jpg`);
         text = node.textContent;
         a.innerHTML = node.textContent;
+
+        const url = `../desktop15/desktop15.html`
+        document.getElementById("register").setAttribute("href",url)
+        document.getElementById("registerfe").setAttribute("href",url)
+        text2 = text2.charAt(0).toUpperCase() + text2.slice(1);
+        console.log(text2);
+        localStorage.setItem("name", text2);
     }    
 
 }
 
+
 input.onkeyup = ()=>{
     find(input.value);
+}
+
+const func = ()=>{
+    const var_ = document.getElementsByClassName("sportname")[0].innerHTML;
+    document.getElementById("register").setAttribute("href",`../desktop15/${var_}.html`)
 }

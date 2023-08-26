@@ -153,7 +153,9 @@ body{
     border-radius: 2vh;
   
 }
-
+.menu-wrap{
+    height: fit-content;
+}
 .searchicon{
     height: 2vh;
     width: 2vh;
@@ -394,6 +396,7 @@ margin-left: 2vw;
 .scoreboard{
     margin-top: 12vh;
 }
+
 @media screen and (max-width: 1260px){
     .list div{
         margin-left: 1.5vw;
@@ -405,7 +408,8 @@ margin-left: 2vw;
         font-family: fontSatoshi;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px),
+ screen and (min-height: 1000px) {
     #main{
         display: flex;
         flex-direction: column;
@@ -467,23 +471,11 @@ margin-left: 2vw;
         justify-content: space-between;
 
       }
-      .toggler{
-        position: absolute !important;
-        top: 20% !important;
-      }
+
      }
     
-    @media screen and (max-width: 980px){
-        .toggler{
-            position: absolute !important;
-            top: 13.8% !important;
-          }
-        .hlinks li {
-            font-size: 16px;
-        }
-    }
 
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: 800px){
         .maincard{
             display: flex;
             flex-direction: column;
@@ -500,4 +492,5 @@ margin-left: 2vw;
             padding: 1rem;
         }
     }
+
   

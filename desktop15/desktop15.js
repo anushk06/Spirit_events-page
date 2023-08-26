@@ -14,6 +14,15 @@ const videoWidth = videoFrames[0].clientWidth + 10;
 const totalVideos = videoFrames.length;
 let visibleVideos = 3;
 
+
+// dynamic changing of sportname
+
+if(localStorage.getItem("check") == 1){
+    document.getElementsByClassName("game_name")[0].innerHTML = "Basket ball"
+}else{
+    document.getElementsByClassName("game_name")[0].innerHTML = localStorage.getItem("name");
+}
+
 const updateVisibleVideos = () => {
     if (window.innerWidth <= 576) {
         visibleVideos = 1;
