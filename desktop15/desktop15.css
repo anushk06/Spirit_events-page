@@ -136,14 +136,25 @@ body{
 }
 
 .team_size{
-    font-size: 1.5vw;
+  font-family: satoshi;
+  font-size: 1.5vw;
+  font-style: italic;
 }
+
+.venue {
+  font-family: satoshi;
+  font-size: 1.5vw;
+  font-style: italic;
+}
+
 .bold{
+  font-style: normal;
     font-family: satoshi_italic;
     font-size: 1.8vw;
 }
 
 .rulebook_link{
+    color: #3E2174;
     margin-top: 1.4vw;
     margin-bottom: 3vw;
     font-style: italic;
